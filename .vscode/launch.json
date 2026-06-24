@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GeneradorApplication<Generador>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.LAAG.Generador.GeneradorApplication",
+            "projectName": "Generador",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

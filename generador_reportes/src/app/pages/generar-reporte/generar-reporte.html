@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Generar Reporte</h2>
+  
+  <div class="buttons">
+    <p>{{ materias().length === 0 ? 'No hay materias disponibles para generar reportes.' : 'Seleccione el tipo de reporte que desea generar:' }}</p>
+    <button [routerLink]="'/generarReporte/institucion-ducativa'" [disabled]="materias().length === 0">Generar Reporte IE</button>
+    <button [routerLink]="'/generarReporte/unidad-economica'" [disabled]="materias().length === 0">Generar Reporte UE</button>
+  </div>
+
+  <div class="materias-section">
+    <h3>Materias del Usuario</h3>
+    <ul>
+      @for (materia of materias(); track materia.id_materia_user) {
+        <li>{{ materia.name_materia }} - {{ materia.tipo_materia_user === 1 ? 'IE' : 'UE' }}</li>
+      }
+    </ul>
+  </div>
+</div>

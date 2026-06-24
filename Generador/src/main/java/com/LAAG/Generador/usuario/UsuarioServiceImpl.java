@@ -11,9 +11,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioRepository repository;
 
-    public UsuarioServiceImpl(
-            UsuarioRepository repository
-    ) {
+    public UsuarioServiceImpl(UsuarioRepository repository) {
         this.repository = repository;
     }
 

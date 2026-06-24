@@ -1,8 +1,8 @@
 <div class="container">
   <h2>Generar Reporte</h2>
   
+  <p>{{ materias().length === 0 ? 'No hay materias disponibles para generar reportes.' : 'Seleccione el tipo de reporte que desea generar:' }}</p>
   <div class="buttons">
-    <p>{{ materias().length === 0 ? 'No hay materias disponibles para generar reportes.' : 'Seleccione el tipo de reporte que desea generar:' }}</p>
     <button [routerLink]="'/generarReporte/institucion-ducativa'" [disabled]="materias().length === 0">Generar Reporte IE</button>
     <button [routerLink]="'/generarReporte/unidad-economica'" [disabled]="materias().length === 0">Generar Reporte UE</button>
   </div>

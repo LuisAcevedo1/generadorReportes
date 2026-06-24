@@ -13,10 +13,11 @@ import { MateriaUser } from '../../interfaces/materia-user.interface';
 export class GenerarReporte implements OnInit {
   private http = inject(HttpClient);
   materias = signal<MateriaUser[]>([]);
+  //temporal esto se retira cuadno se tenga login
   private userId = 1;
 
   ngOnInit(): void {
-    this.http.get<MateriaUser[]>(`${environment.apiUrl}/materiasUser/obtener?id_user=${this.userId}`)
+    this.http.get<MateriaUser[]>(`${environment.apiUrl}/${environment.path.materias}/obtener?id_user=${this.userId}`)
       .subscribe({
         next: (data) => {
           console.log('Datos recibidos del backend:', data);

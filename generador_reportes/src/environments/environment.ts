@@ -1,3 +1,6 @@
 export const environment = {
-  apiUrl: 'http://localhost:4231'
+  apiUrl: 'http://localhost:4231',
+  path: {
+    materias: 'materiasUser'
+  }
 };
